@@ -1,0 +1,64 @@
+* <if-elif-else> *
+
+if condition1:
+    statement a
+elif condition2:
+    statement b
+elif condition 3:
+    ...
+else:
+    statement c
+
+> if condition1 is true, condition2 and condition3 are not checked.
+> if none of conditions are true, statement c is done nonetheless.
+
+----------------------------------------------------------------------------------------------
+* <for-loop> *
+
+for i in iterable:
+    statement 1
+
+> it can "break" by reaching a specific goal and do statement 2:
+
+for i in iterable:
+    statement 1
+    break
+statement 2
+
+> it can continue by reaching a specific goal and do statement 2:
+
+for i in iterable:
+    statement 1
+    continue
+statement 2
+
+> loops can be nested:
+
+for i in iterable:
+    for j in iterable:
+        statement 1
+
+> for i in range(start, stop (+1), step):
+    statement1
+
+----------------------------------------------------------------------------------------------
+* <while> *
+
+while condition:
+    statement 1
+
+----------------------------------------------------------------------------------------------
+* <slicing and indexing> *
+
+a = "string"
+> a[int in range len(a)] = 'single string of character'
+> a[-1] | a[len(a) - 1] = 'last character in string'
+
+> a[start ( = 0 ) : stop | len(a) + 1 : step ( = 1 )]
+
+> reversing a string: a[start :: -1]
+
+
+
+
+
