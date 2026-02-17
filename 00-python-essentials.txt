@@ -107,6 +107,41 @@ list("string") = ['s', 't', 'r', 'i', 'n', 'g']
 > a.reverse() reverses the elements of the list.
 > a.copy()
 
+------------------------------------------------------------------------------------------------
+* <dictionary> *
+*it has <key:value> structure.
+
+> d = dict(<key:value>)
+  d = {<key:value>}
+> d[<key>] returns the value of that key.
+> d.keys() returns keys in dictionary. *usually comes in list(d.keys())
+> d.values() returns values in dictionary. *usually comes in list(d.values())
+> d[<key>] = <value> for setting a value for a key.
+> list(d) returns a list of all the keys used in the dictionary d.
+> len(d) returns the number of items in the dictionary d.
+> del d[<key>] for deleting a key:value pair.
+> <key> in d or <key> not in d, to check availability of a key in d.
+> d.clear()
+> d.get(<key>) returns the value of the given key. (equal to d[<key>])
+> d.pop(<key>) removes the key:value by the key given AND returns its value.
+> d.popitem(<key>) removes the key:value by the key given AND returns the pair.
+> d.setdefault(<key> , <value>) it returns the actual value of key IF IT EXIST, if not, it returns the value given.
+
+> for i in d:
+      print(i)
+      -------> prints keys.
+ 
+ for i in d:
+      print(d[i])
+      -------> prints values.
+ 
+ for i in d:
+      print(i, d[i])
+      -------> prints <key:value>
+ 
+ for i, j in d.items():
+      print(i, j)
+      -------> prints <key:value>
 
 
 
