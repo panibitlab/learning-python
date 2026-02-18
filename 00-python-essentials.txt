@@ -109,6 +109,7 @@ list("string") = ['s', 't', 'r', 'i', 'n', 'g']
 
 ------------------------------------------------------------------------------------------------
 * <dictionary> *
+
 *it has <key:value> structure.
 
 > d = dict(<key:value>)
@@ -143,6 +144,35 @@ list("string") = ['s', 't', 'r', 'i', 'n', 'g']
       print(i, j)
       -------> prints <key:value>
 
+-------------------------------------------------------------------------------------------
+* <tuple> *
+
+t = () equal to tuple(<ExampleOfDataStructure>): for one element (<element1> , )
+* non-changeable once made. elements can not be modified too.
+> x, y = y, x for swapping values.
+> <string>.split(<char>) it splits the given string to pieces based on the char given.
+  "hi@example.com".split("@") ---> ['hi', 'example.com']
+  username, domain = "hi@example.com".split("@") ---> username = 'hi', domain = 'example.com'
+> t.count(<value>) it counts the number of value given in t.
+> t.index(<value>) returns the index of the value given.
+
+---------------------------------------------------------------------------------------------
+* <set> *
+
+> s = set() equal to s = {<value>, <value>,...} (only key structure. no value.)
+> Removes duplicate elements, reorders elements automatically: no index structure.
+> s1.union(s2) = s1 ∪ s2
+> s1.intersection(s2) = s1 ∩ s2
+> s1.difference(s2) = s1 - s2
+> s.add(<value>) adds to the set if it does not exist already.
+> s.remove(<value>)
+*not built-in:
+from Collections import *
+
+> namedtuple(<tag>, <values>):
+  ex) Point = namedtuple('Point', 'x,y,z')
+      Point(10,20,30) ---> Point.x = 10, Point.y = 20, Point.z = 30
+> counter(<DataStructure>) counts all elements in the given DataStructure. ('value':'NumOfRepetition')
 
 
 
