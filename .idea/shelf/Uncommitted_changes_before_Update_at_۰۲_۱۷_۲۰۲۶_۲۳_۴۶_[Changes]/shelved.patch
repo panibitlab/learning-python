@@ -1,0 +1,47 @@
+Index: python-essentiols.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>* <if-elif-else> *\r\n\r\nif condition1:\r\n    statement a\r\nelif condition2:\r\n    statement b\r\nelif condition 3:\r\n    ...\r\nelse:\r\n    statement c\r\n\r\n> if condition1 is true, condition2 and condition3 are not checked.\r\n> if none of conditions are true, statement c is done nonetheless.\r\n\r\n----------------------------------------------------------------------------------------------\r\n* <for-loop> *\r\n\r\nfor i in iterable:\r\n    statement 1\r\n\r\n> it can \"break\" by reaching a specific goal and do statement 2:\r\n\r\nfor i in iterable:\r\n    statement 1\r\n    break\r\nstatement 2\r\n\r\n> it can continue by reaching a specific goal and do statement 2:\r\n\r\nfor i in iterable:\r\n    statement 1\r\n    continue\r\nstatement 2\r\n\r\n> loops can be nested:\r\n\r\nfor i in iterable:\r\n    for j in iterable:\r\n        statement 1\r\n\r\n> for i in range(start, stop (+1), step):\r\n    statement1\r\n\r\n----------------------------------------------------------------------------------------------\r\n* <while> *\r\n\r\nwhile condition:\r\n    statement 1\r\n\r\n----------------------------------------------------------------------------------------------\r\n* <slicing and indexing> *\r\n\r\na = \"string\"\r\n> a[int in range len(a)] = 'single string of character'\r\n> a[-1] | a[len(a) - 1] = 'last character in string'\r\n\r\n> a[start ( = 0 ) : stop | len(a) + 1 : step ( = 1 )]\r\n\r\n> reversing a string: a[start :: -1]\r\n\r\n----------------------------------------------------------------------------------------------\r\n* <list> *\r\n\r\na = []\r\n> a = [index_1, index_2, ...., index_n]\r\n> a = list( <AnyOtherTypeOfDataStructure> )\r\n\r\nlist(\"string\") = ['s', 't', 'r', 'i', 'n', 'g']\r\n\r\n> len(a) = number of indexes in a\r\n> a [start : stop (up to, but not including) : step] for slicing.\r\n\r\n* in list a = [1, 2.5, 'a', [4, 'hi'], 5, 'b'] return 'hi':\r\n  [4, 'hi'] is the 4th element. a[4] returns [4, 'hi'] and 'hi' is the last element in this list.\r\n  a[4][-1] returns 'hi'.\r\n  * return 'h' in 'hi': a[4][-1][0]\r\n\r\n> for i in a:\r\n    print(i)\r\n    ----------> prints elements of the list.\r\n\r\n  for i in range(len(a)):\r\n    print(i)\r\n    ----------> prints the indexes.\r\n\r\n  for i in range(len(a)):\r\n    print(a[i])\r\n    ----------> prints elements of the list.\r\n\r\n> a.append(<value>) for adding a new element to the END of the list.\r\n> a.insert(<index>, <value>) for adding a new element in position of the given INDEX.\r\n> a.extend(iterable) for extending the list, using an iterable data structure (equal to a-list + b-list).\r\n\r\n* a = [1, 2, 3]:\r\n  a.append([4,5,6])\r\n  -----------------> a = [1, 2, 3, [4, 5, 6]]\r\n  a.extend([4, 5, 6])\r\n  -----------------> a = [1, 2, 3, 4, 5, 6]\r\n\r\n> a.remove(<value>) removes the first item from the list whose value is equal to <value>.\r\n> a.pop(<position>) removes the item at the given position in the list AND returns it.\r\n  * if no index is specified, last item in the list is removed and returned.\r\n> a.clear() clears list.\r\n> a.index(<value>) returns the index of the given value.\r\n> a. count(<value>) returns the number of times, given value appears in the list.\r\n> a.sort() sorts a from lowest to greatest.\r\n> a.reverse() reverses the elements of the list.\r\n> a.copy()\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+===================================================================
+diff --git a/python-essentiols.txt b/python-essentiols.txt
+--- a/python-essentiols.txt	
++++ b/python-essentiols.txt	
+@@ -107,7 +107,38 @@
+ > a.reverse() reverses the elements of the list.
+ > a.copy()
+ 
++------------------------------------------------------------------------------------------------
++* <dictionary> *
++*it has <key:value> structure.
+ 
++> d = dict(<key:value>)
++  d = {<key:value>}
++> d[<key>] returns the value of that key.
++> d.keys() returns keys in dictionary. *usually comes in list(d.keys())
++> d.values() returns values in dictionary. *usually comes in list(d.values())
++> d[<key>] = <value> for setting a value for a key.
++> list(d) returns a list of all the keys used in the dictionary d.
++> len(d) returns the number of items in the dictionary d.
++> del d[<key>] for deleting a key:value pair.
++> <key> in d or <key> not in d, to check availability of a key in d.
++> d.clear()
++> d.get(<key>) returns the value of the given key. (equal to d[<key>])
++> d.pop(<key>) removes the key:value by the key given AND returns its value.
++> d.popitem(<key>) removes the key:value by the key given AND returns the pair.
++> d.setdefault(<key> , <value>) it returns the actual value of key IF IT EXIST, if not, it returns the value given.
++
++> for i in d:
++      print(i)
++      -------> prints keys.
++  for i in d:
++      print(d[i])
++      -------> prints values.
++  for i in d:
++      print(i, d[i])
++      -------> prints <key:value>
++  for i, j in d.items():
++      print(i, j)
++      -------> prints <key:value>
+ 
+ 
+ 

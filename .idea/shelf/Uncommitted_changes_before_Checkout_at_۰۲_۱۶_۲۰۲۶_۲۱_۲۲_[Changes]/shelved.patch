@@ -1,0 +1,15 @@
+Index: 101.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#lets begin!
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/101.py b/101.py
+--- a/101.py	(revision f51cd830eb4a096ee4b277bdf10e350f03df49b3)
++++ b/101.py	(date 1771264354706)
+@@ -1,1 +1,1 @@
+-#lets begin!
+\ No newline at end of file
++# lets begin!
+\ No newline at end of file
