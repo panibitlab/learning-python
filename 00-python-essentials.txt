@@ -174,6 +174,42 @@ from Collections import *
       Point(10,20,30) ---> Point.x = 10, Point.y = 20, Point.z = 30
 > counter(<DataStructure>) counts all elements in the given DataStructure. ('value':'NumOfRepetition')
 
+----------------------------------------------------------------------------------------------
+* <function> *
+
+> def <function_name> (<optional_arguments>):
+      """documentation"""
+      statement
+      return <optional_value>
+
+> a guide for users can be set:
+  def sum_mul(a:float, b:float) -> list:
+    return ['sum': a + b, 'mul': a * b]
+
+  print(sum_mul(2, 20))
+  print(help(sum_mul))
+  --------------------> sum_mul(a : class 'float'>, b : <class 'float'>) -> list
+                        documentation
+
+> type checking in functions:
+  def ... (a):
+      if not isinstance(a, (<type1>, <type2>,...)):
+          raise Exception / <type_of_error> (<exception_details>)
+
+> default input arguments:
+  def ... (a : float = 10.0):
+    return a * a
+
+  print(...())
+  ------------> 100.0
+  print(...(4))
+  ------------> 16.0
+
+---------------------------------------------------------------------------------------------
+* <module> *
+
+
+
 
 
 
