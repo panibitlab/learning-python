@@ -206,11 +206,59 @@ from Collections import *
   ------------> 16.0
 
 ---------------------------------------------------------------------------------------------
-* <module> *
+* <interator> *
 
+> a = <a_data_structure>
+  iter(a) -> makes a, an iterable data structure.
+> print(next(iter(a))) -> prints elements from index[0], each time.
+> *for, uses the inter() of the data type given to it!
 
+------------------------------------------------------------------------------------------------
+* <generator> *
 
+> uses `yield` to produce values one at a time instead of returning all results at once.
+> def gen():
+    yield 1
+    yield n
 
+    for execution:
 
+    for i in gen():
+    print(i)
 
+> ex) generating even numbers:
+      def even_numbers(n):
+          for i in range(n):
+            if i % 2 == 0:
+                yield i
+      execution:
+      for num in even_numbers(10):
+          print(num)
+          -----------------------> prints even numbers from 0 to 8. (range(n) = up to n, but not including n)
+
+> *generator expression: (<expression> for <condition>)
+  ex) (i for i in a if i % 2 == 0) prints even numbers that were in the given list.
+
+-----------------------------------------------------------------------------------------------
+* <nested functions> *
+
+> used mostly in "encapsulation"!
+
+  def outer_function():
+    def inner_function():
+        print("hi!")
+    inner_function()
+
+  outer_function() -> prints hi!
+
+----------------------------------------------------------------------------------------------
+* <recursive functions> *
+
+> a kind of nested function. to call a function, in that function.
+
+  ex) def factorial(n):
+        # n! = n * (n-1)!
+        if n == 1:
+            return 1
+        return n * factorial(n-1)
 
