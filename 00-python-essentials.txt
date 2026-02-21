@@ -293,3 +293,71 @@ equals to:
 > magic methods -> <NameOfMethode>
 > it is possible to call a function written outside a class, inside of it.
 > it is possible to use an object created from the class, in a function outside the class.
+> INHERITANCE:
+  ex) class Employees:
+       def __init__(self, fname, lname, national_id, age):
+           self.fname = fname
+           self.lname = lname
+           self.national_id = national_id
+           self.age = age
+
+      class ITAdmin(Employees):
+        def __init__(self, fname, lname, national_id, age, it_code):
+            #Employees.__init__(self, fname, lname, national_id, age)
+             super().__init__(fname, lname, national_id, age)
+             self.it_code = it_code
+        def access(self):
+             print("IT")
+
+  class ITAdmin is a child of class Employee. it has all the attributes AND it_code for itself.
+  it shares a function in which, it will use the one locally, once called by a object made from it.
+  once initialled inside itself by init, it can share all the other attributes from the parent class,
+  by either:
+  1) def __init__(self, fname, lname, national_id, age, it_code):
+         self.fname = fname
+         self.lname = lname
+         self.national_id = national_id
+         self.age = age
+         self.it_code = it_code
+   2) Employees <ParentClassName>.__init__(self, fname, lname, national_id, age)
+      <LocalAttributes>
+      or
+      super().__init__(fname, lname, national_id, age)
+      <LocalAttributes>
+
+
+  > issubclass(<ChildClassName>, <ParentClassName>) -> boolean.
+
+> ABSTRACTION:
+  an abstract class defines a common blueprint for other classes and cannot be instantiated.
+  it requires its subclasses to implement specific methods.
+
+> POLYMORPHISM:
+  allows different objects (from different classes) to respond to the same method call in their own specific way.
+
+> ENCAPSULATION:
+  the principle of hiding internal data and exposing only controlled access through methods.
+
+  ex) class BankAccount:
+          def __init__(self, balance):
+            self.__balance = balance   # private variable
+
+          def deposit(self, amount):
+            if amount > 0:
+               self.__balance += amount
+
+          def get_balance(self):
+               return self.__balance
+
+------------------------------------------------------------------------------------------------------
+* <class methods & static methods> *
+
+> class methods can be called on the class itself. no need to create an object and call the methode on it:
+  @classmethode
+  def ...(cls):
+    statement
+
+> a static method is a method that belongs to a class but does not access instance or class data:
+  @staticmethode
+  def ...():
+    statement
