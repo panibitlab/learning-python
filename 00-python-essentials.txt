@@ -282,3 +282,14 @@ from Collections import *
 > "hi {} {:.2f} welcome!".format(name, 5.76452)
 equals to:
 > f"hi {name} {5.76452 :.2f} welcome!"
+
+---------------------------------------------------------------------------------------------
+* <class & object oriented programming> *
+
+> to call a class, is to make an object from that class.
+> methode is a function in class.
+> * first argument in EVERY methode of a class, is "self".
+
+> magic methods -> <NameOfMethode>
+> it is possible to call a function written outside a class, inside of it.
+> it is possible to use an object created from the class, in a function outside the class.
