@@ -262,3 +262,23 @@ from Collections import *
             return 1
         return n * factorial(n-1)
 
+-----------------------------------------------------------------------------------------------
+* <*args and *kwargs> *
+
+> working with any number of arguments.
+  def ...(*args):
+    for i in args:
+    --------------> * gives out a set. it is iterable!
+> working with any number of arguments, this time, with given value.
+  def ...(*args, **kwargs):
+    ...
+  calling the function: ...(5, 3, 1, 'a', x = 500, y = 100)
+
+* always arguments with non default value, come first!
+
+--------------------------------------------------------------------------------------------
+* <EverythingElseAboutStrings> *
+
+> "hi {} {:.2f} welcome!".format(name, 5.76452)
+equals to:
+> f"hi {name} {5.76452 :.2f} welcome!"
