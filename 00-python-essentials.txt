@@ -361,3 +361,40 @@ equals to:
   @staticmethode
   def ...():
     statement
+
+-----------------------------------------------------------------------------------------------------
+* <working with files> *
+
+> open(r<file_name>, <access_mode>)
+  once writing as "with open(<name>) as f:  there will be no need to worry about such things as closing the file.
+                        statements"
+
+> <file_name>.readlines() ---> a list which contains every line in the file.
+> <file_name>.readline() ---> only reads one line, beginning from the first line in file. (*an iterator)
+> <file_name>.read() ---> a string in which is written everything in the file.
+> open(r<file_name>, mode = 'w') as f:
+  -------------------------------------> gives access to write in a file.
+> f.write("<data>") ---> overwrites the file.
+> open(r<file_name>, mode = 'a') as f:
+  f.write("<data>") ---> appends the new to the old data.
+  * use \n to go to the next line before or after appending: f.write("\n<data>")
+> f.write("\n".join(<iterable_data_structure>)) ---> writes in file every element of iterable given, goes to next line.
+
+--------------------------------------------------------------------------------------------------
+* <exception handling> *
+
+> try:
+     ....
+  except <error_name>:
+        <a statement for when the error has occurred.>
+  except:
+        <a general statement for any error occurrence.>
+  finally:
+        <a statement that should happen nonetheless.>
+
+--------------------------------------------------------------------------------------------------
+* <os module> *
+
+> os.getcwd() ---> current working directory
+> os.chdir(<path>)
+> os.mkdir(<directory_name>)
